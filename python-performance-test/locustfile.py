@@ -4,10 +4,9 @@ class MyStressTestUser(HttpUser):
     wait_time = between(1, 2)
 
     @task
-    def get_posts_users(self):
+    def get_health_status(self):
         self.client.get("/health")
+
     @task
-    def get_posts_users(self):
+    def get_home_page(self):
         self.client.get("/")
-        
-      
